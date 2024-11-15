@@ -12,7 +12,7 @@ struct MainView: View {
     
     var body: some View {
         NavigationStack(path: $navigationPath) {
-            ContentView(navigationPath: $navigationPath)
+            SplashScreen(navigationPath: $navigationPath)
                 .withNavigationHandler(path: $navigationPath)
         }
     }

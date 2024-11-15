@@ -1,7 +1,7 @@
 import SwiftUI
 import Lottie
 
-struct ContentView: View {
+struct SplashScreen: View {
     @Binding var navigationPath: NavigationPath
     @State private var navigateToNextScreen = false
     
@@ -42,5 +42,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(navigationPath: .constant(NavigationPath()))
+    SplashScreen(navigationPath: .constant(NavigationPath()))
 }

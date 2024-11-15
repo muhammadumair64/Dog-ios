@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A2C39152CE4809D001622F2 /* Dog_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C39142CE4809D001622F2 /* Dog_iosApp.swift */; };
-		9A2C39172CE4809D001622F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C39162CE4809D001622F2 /* ContentView.swift */; };
+		9A2C39172CE4809D001622F2 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C39162CE4809D001622F2 /* SplashScreen.swift */; };
 		9A2C39192CE4809F001622F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A2C39182CE4809F001622F2 /* Assets.xcassets */; };
 		9A2C391C2CE4809F001622F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A2C391B2CE4809F001622F2 /* Preview Assets.xcassets */; };
 		9A2C39262CE4809F001622F2 /* Dog_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C39252CE4809F001622F2 /* Dog_iosTests.swift */; };
@@ -41,7 +41,7 @@
 /* Begin PBXFileReference section */
 		9A2C39112CE4809D001622F2 /* Dog-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2C39142CE4809D001622F2 /* Dog_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog_iosApp.swift; sourceTree = "<group>"; };
-		9A2C39162CE4809D001622F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9A2C39162CE4809D001622F2 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		9A2C39182CE4809F001622F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A2C391B2CE4809F001622F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9A2C39212CE4809F001622F2 /* Dog-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dog-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +108,7 @@
 				9A7009842CE71C2400A70763 /* HomeScreen.swift */,
 				9A2C39412CE48A65001622F2 /* PremiumScreen.swift */,
 				9A2C39142CE4809D001622F2 /* Dog_iosApp.swift */,
-				9A2C39162CE4809D001622F2 /* ContentView.swift */,
+				9A2C39162CE4809D001622F2 /* SplashScreen.swift */,
 				9A7009862CE721CE00A70763 /* MyNavigationHandler.swift */,
 				9A2C39182CE4809F001622F2 /* Assets.xcassets */,
 				9A2C391A2CE4809F001622F2 /* Preview Content */,
@@ -281,7 +281,7 @@
 				9A7009892CE727D200A70763 /* MainView.swift in Sources */,
 				9A7009852CE71C2400A70763 /* HomeScreen.swift in Sources */,
 				9A2C39422CE48A65001622F2 /* PremiumScreen.swift in Sources */,
-				9A2C39172CE4809D001622F2 /* ContentView.swift in Sources */,
+				9A2C39172CE4809D001622F2 /* SplashScreen.swift in Sources */,
 				9A2C39152CE4809D001622F2 /* Dog_iosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

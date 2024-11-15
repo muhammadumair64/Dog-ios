@@ -16,6 +16,9 @@
 		9A2C39322CE4809F001622F2 /* Dog_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C39312CE4809F001622F2 /* Dog_iosUITestsLaunchTests.swift */; };
 		9A2C39402CE481BC001622F2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 9A2C393F2CE481BC001622F2 /* Lottie */; };
 		9A2C39422CE48A65001622F2 /* PremiumScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C39412CE48A65001622F2 /* PremiumScreen.swift */; };
+		9A7009852CE71C2400A70763 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7009842CE71C2400A70763 /* HomeScreen.swift */; };
+		9A7009872CE721CE00A70763 /* MyNavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7009862CE721CE00A70763 /* MyNavigationHandler.swift */; };
+		9A7009892CE727D200A70763 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7009882CE727D200A70763 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		9A2C392F2CE4809F001622F2 /* Dog_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog_iosUITests.swift; sourceTree = "<group>"; };
 		9A2C39312CE4809F001622F2 /* Dog_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9A2C39412CE48A65001622F2 /* PremiumScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumScreen.swift; sourceTree = "<group>"; };
+		9A7009842CE71C2400A70763 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		9A7009862CE721CE00A70763 /* MyNavigationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationHandler.swift; sourceTree = "<group>"; };
+		9A7009882CE727D200A70763 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +104,12 @@
 		9A2C39132CE4809D001622F2 /* Dog-ios */ = {
 			isa = PBXGroup;
 			children = (
+				9A7009882CE727D200A70763 /* MainView.swift */,
+				9A7009842CE71C2400A70763 /* HomeScreen.swift */,
 				9A2C39412CE48A65001622F2 /* PremiumScreen.swift */,
 				9A2C39142CE4809D001622F2 /* Dog_iosApp.swift */,
 				9A2C39162CE4809D001622F2 /* ContentView.swift */,
+				9A7009862CE721CE00A70763 /* MyNavigationHandler.swift */,
 				9A2C39182CE4809F001622F2 /* Assets.xcassets */,
 				9A2C391A2CE4809F001622F2 /* Preview Content */,
 			);
@@ -268,6 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A7009872CE721CE00A70763 /* MyNavigationHandler.swift in Sources */,
+				9A7009892CE727D200A70763 /* MainView.swift in Sources */,
+				9A7009852CE71C2400A70763 /* HomeScreen.swift in Sources */,
 				9A2C39422CE48A65001622F2 /* PremiumScreen.swift in Sources */,
 				9A2C39172CE4809D001622F2 /* ContentView.swift in Sources */,
 				9A2C39152CE4809D001622F2 /* Dog_iosApp.swift in Sources */,

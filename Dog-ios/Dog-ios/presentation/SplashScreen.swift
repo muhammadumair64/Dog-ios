@@ -43,4 +43,5 @@ struct SplashScreen: View {
 
 #Preview {
     SplashScreen(navigationPath: .constant(NavigationPath()))
+
 }

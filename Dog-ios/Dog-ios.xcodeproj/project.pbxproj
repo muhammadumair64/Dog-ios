@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047714A62CEA7E32000C914B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047714A52CEA7E32000C914B /* HomeViewModel.swift */; };
+		047714A82CEA7E8C000C914B /* myExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047714A72CEA7E8C000C914B /* myExtentions.swift */; };
+		04C55FF52CE9E95C008D24E2 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C55FF42CE9E95C008D24E2 /* SideMenuView.swift */; };
 		9A2C39152CE4809D001622F2 /* Dog_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C39142CE4809D001622F2 /* Dog_iosApp.swift */; };
 		9A2C39172CE4809D001622F2 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C39162CE4809D001622F2 /* SplashScreen.swift */; };
 		9A2C39192CE4809F001622F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A2C39182CE4809F001622F2 /* Assets.xcassets */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		047714A52CEA7E32000C914B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		047714A72CEA7E8C000C914B /* myExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myExtentions.swift; sourceTree = "<group>"; };
+		04C55FF42CE9E95C008D24E2 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		9A2C39112CE4809D001622F2 /* Dog-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2C39142CE4809D001622F2 /* Dog_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog_iosApp.swift; sourceTree = "<group>"; };
 		9A2C39162CE4809D001622F2 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
@@ -81,6 +87,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		047714A22CEA721F000C914B /* data */ = {
+			isa = PBXGroup;
+			children = (
+				9A7009862CE721CE00A70763 /* MyNavigationHandler.swift */,
+				047714A72CEA7E8C000C914B /* myExtentions.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		047714A32CEA7242000C914B /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				047714A42CEA7E1C000C914B /* viewModels */,
+				9A7009882CE727D200A70763 /* MainView.swift */,
+				9A2C39162CE4809D001622F2 /* SplashScreen.swift */,
+				9A2C39412CE48A65001622F2 /* PremiumScreen.swift */,
+				9A7009842CE71C2400A70763 /* HomeScreen.swift */,
+				04C55FF42CE9E95C008D24E2 /* SideMenuView.swift */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		047714A42CEA7E1C000C914B /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				047714A52CEA7E32000C914B /* HomeViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
 		9A2C39082CE4809D001622F2 = {
 			isa = PBXGroup;
 			children = (
@@ -104,12 +140,9 @@
 		9A2C39132CE4809D001622F2 /* Dog-ios */ = {
 			isa = PBXGroup;
 			children = (
-				9A7009882CE727D200A70763 /* MainView.swift */,
-				9A7009842CE71C2400A70763 /* HomeScreen.swift */,
-				9A2C39412CE48A65001622F2 /* PremiumScreen.swift */,
+				047714A32CEA7242000C914B /* presentation */,
+				047714A22CEA721F000C914B /* data */,
 				9A2C39142CE4809D001622F2 /* Dog_iosApp.swift */,
-				9A2C39162CE4809D001622F2 /* SplashScreen.swift */,
-				9A7009862CE721CE00A70763 /* MyNavigationHandler.swift */,
 				9A2C39182CE4809F001622F2 /* Assets.xcassets */,
 				9A2C391A2CE4809F001622F2 /* Preview Content */,
 			);
@@ -278,8 +311,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A7009872CE721CE00A70763 /* MyNavigationHandler.swift in Sources */,
+				04C55FF52CE9E95C008D24E2 /* SideMenuView.swift in Sources */,
 				9A7009892CE727D200A70763 /* MainView.swift in Sources */,
+				047714A62CEA7E32000C914B /* HomeViewModel.swift in Sources */,
 				9A7009852CE71C2400A70763 /* HomeScreen.swift in Sources */,
+				047714A82CEA7E8C000C914B /* myExtentions.swift in Sources */,
 				9A2C39422CE48A65001622F2 /* PremiumScreen.swift in Sources */,
 				9A2C39172CE4809D001622F2 /* SplashScreen.swift in Sources */,
 				9A2C39152CE4809D001622F2 /* Dog_iosApp.swift in Sources */,

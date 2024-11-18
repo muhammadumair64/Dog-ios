@@ -10,7 +10,9 @@ struct NavigationHandler: ViewModifier {
                 case .premiumScreen:
                     PremiumScreen(navigationPath: $path).navigationBarBackButtonHidden()
                 case .homeScreen(let userName):
-                    HomeScreen(userName: userName).navigationBarBackButtonHidden()
+                    HomeScreen(userName: userName,navigationPath: $path).navigationBarBackButtonHidden()
+                case .translatorScreen:
+                    TranslateScreen(navigationPath: $path).navigationBarBackButtonHidden()  
                 }
             }
     }
@@ -25,4 +27,5 @@ extension View {
 enum AppDestination: Hashable {
     case premiumScreen
     case homeScreen(userName: String)
+    case translatorScreen
 }

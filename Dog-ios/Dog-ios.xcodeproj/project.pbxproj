@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0415CED12CEBC29700D248FE /* TranslateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415CED02CEBC29700D248FE /* TranslateScreen.swift */; };
 		047714A62CEA7E32000C914B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047714A52CEA7E32000C914B /* HomeViewModel.swift */; };
 		047714A82CEA7E8C000C914B /* myExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047714A72CEA7E8C000C914B /* myExtentions.swift */; };
 		04C55FF52CE9E95C008D24E2 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C55FF42CE9E95C008D24E2 /* SideMenuView.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0415CED02CEBC29700D248FE /* TranslateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateScreen.swift; sourceTree = "<group>"; };
 		047714A52CEA7E32000C914B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		047714A72CEA7E8C000C914B /* myExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myExtentions.swift; sourceTree = "<group>"; };
 		04C55FF42CE9E95C008D24E2 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				9A2C39162CE4809D001622F2 /* SplashScreen.swift */,
 				9A2C39412CE48A65001622F2 /* PremiumScreen.swift */,
 				9A7009842CE71C2400A70763 /* HomeScreen.swift */,
+				0415CED02CEBC29700D248FE /* TranslateScreen.swift */,
 			);
 			path = screenViews;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0415CED12CEBC29700D248FE /* TranslateScreen.swift in Sources */,
 				9A7009872CE721CE00A70763 /* MyNavigationHandler.swift in Sources */,
 				04C55FF52CE9E95C008D24E2 /* SideMenuView.swift in Sources */,
 				9A7009892CE727D200A70763 /* MainView.swift in Sources */,

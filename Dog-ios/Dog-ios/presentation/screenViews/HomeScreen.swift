@@ -11,7 +11,7 @@ import Foundation
 
 struct HomeScreen: View {
     var userName: String
-
+    @Binding var navigationPath: NavigationPath
     @State var presentSideMenu = false
     @State var selectedSideMenuTab = 0
     
@@ -73,6 +73,9 @@ struct HomeScreen: View {
                                        .cornerRadius(20)
                                        .padding(.horizontal,15)
                                        .padding(.top,20)
+                                       .onTapGesture {
+                                           navigationPath.append(AppDestination.translatorScreen)
+                                       }
                            LazyVGrid(columns: viewModel.columns) {
                                ForEach(viewModel.items, id: \.2) { item in
                                               GridItemView(color: item.0, image: item.1, title: item.2, arrow: item.3, textColor: item.4)
@@ -127,7 +130,7 @@ struct HomeScreen: View {
 }
 
 #Preview {
-    HomeScreen(userName: "Umair")
+    HomeScreen(userName: "Umair", navigationPath: .constant(NavigationPath()))
 }
 
 

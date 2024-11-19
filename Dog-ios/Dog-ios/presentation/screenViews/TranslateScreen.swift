@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct TranslateScreen: View {
     @Environment(\.dismiss) var dismiss
@@ -69,22 +70,27 @@ struct TranslateScreen: View {
                     .animation(.easeInOut, value: isSwapped)
                 }.padding(.top,50)
                     .padding(.horizontal, 20)
-                Spacer()
                 
-                //Text
-                Text("Tap the record button to Start Recording....\nPress the arrow to switch from do g to human translator and vice versa")
-                    .font(.system(size: 15))
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal,20)
-                    .foregroundColor(.black)
-                Spacer()
-                
-                Image(ImageResource.mic)
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .onTapGesture {
-                    }
-                Spacer()
+                VStack{
+                    Spacer()
+                    
+                    //Text
+                    Text("Tap the record button to Start Recording....\nPress the arrow to switch from do g to human translator and vice versa")
+                        .font(.system(size: 15))
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal,20)
+                        .foregroundColor(.black)
+                    Spacer()
+                    
+                    Image(ImageResource.mic)
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .onTapGesture {
+                        }
+                    Spacer()
+                }
+            
+  
             }
             .frame(maxHeight: .infinity, alignment: .top)
             .padding(.vertical, 20)

@@ -27,7 +27,7 @@ struct HomeScreen: View {
                                ).frame(width: 20,height: 20)
                                    .onTapGesture {
                                       withAnimation { presentSideMenu.toggle() }
-                                                    }
+                }
                                                 
                                Text("Dog Translator")
                                    .font(.system(size: 20))

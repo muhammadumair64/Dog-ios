@@ -13,7 +13,10 @@ struct NavigationHandler: ViewModifier {
                     HomeScreen(userName: userName,navigationPath: $path).navigationBarBackButtonHidden()
                 case .translatorScreen:
                     TranslateScreen(navigationPath: $path).navigationBarBackButtonHidden()  
+                    
+                case .AIScreen : AI_screen().navigationBarBackButtonHidden()
                 }
+    
             }
     }
 }
@@ -28,4 +31,5 @@ enum AppDestination: Hashable {
     case premiumScreen
     case homeScreen(userName: String)
     case translatorScreen
+    case AIScreen
 }

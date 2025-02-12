@@ -74,7 +74,7 @@ struct HomeScreen: View {
                                        .padding(.horizontal,15)
                                        .padding(.top,20)
                                        .onTapGesture {
-                                           navigationPath.append(AppDestination.translatorScreen)
+                                           navigationPath.append(AppDestination.AIScreen)
                                        }
                            LazyVGrid(columns: viewModel.columns) {
                                ForEach(viewModel.items, id: \.2) { item in

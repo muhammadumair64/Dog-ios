@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GoogleGenerativeAI
 
 struct MainView: View {
     @State private var navigationPath = NavigationPath()

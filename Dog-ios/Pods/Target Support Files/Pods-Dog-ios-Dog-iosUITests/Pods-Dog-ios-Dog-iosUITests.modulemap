@@ -1,0 +1,6 @@
+framework module Pods_Dog_ios_Dog_iosUITests {
+  umbrella header "Pods-Dog-ios-Dog-iosUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,6 +1,7 @@
 import SceneKit
 import Combine
 import os.log
+import SwiftUI
 
 class CubeSolverViewModel: ObservableObject {
     @Published var rotationSequence: [String] = []
@@ -44,11 +45,7 @@ class CubeSolverViewModel: ObservableObject {
             for y in -1...1 {
                 for z in -1...1 {
                     let cubeGeometry = SCNBox(width: 1, height: 1, length: 1, chamferRadius: 0.1)
-                    
-                    let material = SCNMaterial()
-                    material.diffuse.contents = UIColor.random() // Use the new random color function
-                    
-                    cubeGeometry.materials = [material]
+                    cubeGeometry.materials = generateMaterialsForCubelet(x: x, y: y, z: z)
 
                     let cubeNode = SCNNode(geometry: cubeGeometry)
                     cubeNode.position = SCNVector3(x, y, z)
@@ -60,7 +57,14 @@ class CubeSolverViewModel: ObservableObject {
         }
     }
 
-    
+    private func generateMaterialsForCubelet(x: Int, y: Int, z: Int) -> [SCNMaterial] {
+        let colors: [UIColor] = [.yellow, .green, .orange, .white, .red, .blue]
+        return (0..<6).map { index in
+            let material = SCNMaterial()
+            material.diffuse.contents = colors[index]
+            return material
+        }
+    }
 
     func solveCube(colors: [String]) async {
         guard let canonicalForm = prepareDataForSolver(colors: colors) else {
@@ -94,7 +98,7 @@ class CubeSolverViewModel: ObservableObject {
                 self?.solutionText = "Cube Solved!"
                 return
             }
-
+            
             let move = self.rotationSequence[self.currentMoveIndex]
             self.applyMove(move)
             self.currentMoveIndex += 1
@@ -138,20 +142,4 @@ extension SCNMaterial {
         material.diffuse.contents = color
         return material
     }
-
-    static func randomColor() -> UIColor {
-        let colors: [UIColor] = [.red, .green, .blue, .yellow, .orange, .white]
-        return colors.randomElement() ?? .white
-    }
 }
-extension UIColor {
-    static func random() -> UIColor {
-        return UIColor(
-            red: CGFloat.random(in: 0...1),
-            green: CGFloat.random(in: 0...1),
-            blue: CGFloat.random(in: 0...1),
-            alpha: 1.0
-        )
-    }
-}
-

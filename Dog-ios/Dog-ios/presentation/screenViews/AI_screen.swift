@@ -1,71 +1,140 @@
-//
-//  AI_screen.swift
-//  Dog-ios
-//
-//  Created by Mac Mini on 28/11/2024.
-//
-
 import SwiftUI
 import GoogleGenerativeAI
 
-struct AI_screen: View {
-    let model = GenerativeModel(name: "gemini-pro", apiKey: "AIzaSyAxK8GqbCybm0Lqq1VFBXLR__uWqgQB-1g")
-    @State var userPrompt = ""
-    var prefix = "Answer the following question with medical knowledge and pregnancy-related advice if applicable also if question is not medical related then ignore pregnancy related info also dont tell me that im not a doctor so i have no knowledge i know that u are not im just asking if u have some info over internet or so then provide :"
+// MARK: - AIScreen View
+struct AIScreen: View {
     
-    @State var response: LocalizedStringKey = "How can I help you today?"
-    @State var isLoading = false
+    // MARK: - Dependencies
+    private let geminiModel = GenerativeModel(
+        name: "gemini-1.5-flash",
+        apiKey: "AIzaSyAFgJCBsh92JSpQczp4jZM3orgLQtSaYcc"
+    )
     
+    // MARK: - State
+    @State private var latitudeInput: String = ""
+    @State private var longitudeInput: String = ""
+    @State private var responseMessage: String = "Enter latitude and longitude to discover top cities in that region."
+    @State private var isLoading: Bool = false
+    
+    // MARK: - Body
     var body: some View {
-        VStack {
-            Text("Welcome to Gemini AI")
-                .font(.largeTitle)
-                .foregroundStyle(.indigo)
-                .fontWeight(.bold)
-                .padding(.top, 40)
-            ZStack{
-                ScrollView{
-                    Text(response)
-                        .font(.title)
-                }
-                if isLoading {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle(tint: .indigo))
-                        .scaleEffect(4)
-                }
-            }
-            
-            TextField("Ask anything...", text: $userPrompt, axis: .vertical)
-                .lineLimit(5)
-                .font(.title3)
-                .padding()
-                .background(Color.indigo.opacity(0.2), in: Capsule())
-                .disableAutocorrection(true)
-                .onSubmit {
-                    generateResponse()
-                }
-            
-                
+        VStack(spacing: 24) {
+            headerView
+            responseView
+            coordinatesInputView
+            actionButton
         }
         .padding()
     }
     
-    func generateResponse(){
-        isLoading = true;
-        response = ""
-        
-        Task {
-            do {
-                let result = try await model.generateContent(prefix+userPrompt)
-                isLoading = false
-                response = LocalizedStringKey(result.text ?? "No response found")
-                userPrompt = ""
-            } catch {
-                response = "Something went wrong! \n\(error.localizedDescription)"
+    // MARK: - Subviews
+    private var headerView: some View {
+        Text("Top Cities Explorer")
+            .font(.custom(FontHelper.bold.rawValue, size: 28))
+            .foregroundColor(.indigo)
+            .padding(.top, 40)
+    }
+    
+    private var responseView: some View {
+        ZStack {
+            ScrollView {
+                Text(LocalizedStringKey(responseMessage))
+                    .font(.custom(FontHelper.regular.rawValue, size: 18))
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .frame(maxHeight: 300)
+            
+            if isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .indigo))
+                    .scaleEffect(2)
             }
         }
     }
+    
+    private var coordinatesInputView: some View {
+        VStack(spacing: 12) {
+            InputField(title: "Latitude", text: $latitudeInput)
+            InputField(title: "Longitude", text: $longitudeInput)
+        }
+    }
+    
+    private var actionButton: some View {
+        Button(action: generateCityListUsingCoordinates) {
+            Text("Get Top 5 Cities")
+                .font(.custom(FontHelper.bold.rawValue, size: 16))
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.indigo)
+                .foregroundColor(.white)
+                .cornerRadius(12)
+        }
+    }
+    
+    // MARK: - AI Prompt Logic
+    private func generateCityListUsingCoordinates() {
+        guard let lat = Double(latitudeInput), let lon = Double(longitudeInput) else {
+            print("Invalid input for lat/lon.")
+            responseMessage = "Please enter valid numeric coordinates."
+            return
+        }
+        
+        isLoading = true
+        responseMessage = ""
+        
+        let prompt = """
+        Based on the geographical coordinates (latitude: \(lat), longitude: \(lon)), identify the country these coordinates belong to.
+
+        Then, list only the top 5 most popular or significant cities from that country. Do **not** mention the country name.
+
+        Just return the city names, separated by a `*` symbol. Do **not** include any extra text, explanation, numbering, or bullet points. Return **only** the 5 city names in a single line.
+
+        Example format: City1 * City2 * City3 * City4 * City5
+        """
+
+        print("Gemini Prompt: \(prompt)")
+        
+        Task {
+            do {
+                let result = try await geminiModel.generateContent(prompt)
+                let output = result.text ?? "No response received."
+                print("Gemini Response: \(output)")
+                updateUI(message: output)
+            } catch {
+                print("Gemini generation failed: \(error.localizedDescription)")
+                updateUI(message: "AI generation failed: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    private func updateUI(message: String) {
+        DispatchQueue.main.async {
+            responseMessage = message
+            isLoading = false
+            latitudeInput = ""
+            longitudeInput = ""
+        }
+    }
 }
-#Preview {
-    AI_screen()
+
+// MARK: - Input Field
+struct InputField: View {
+    let title: String
+    @Binding var text: String
+    
+    var body: some View {
+        TextField(title, text: $text)
+            .keyboardType(.decimalPad)
+            .font(.custom(FontHelper.regular.rawValue, size: 16))
+            .padding()
+            .background(Color.indigo.opacity(0.15), in: RoundedRectangle(cornerRadius: 12))
+            .disableAutocorrection(true)
+    }
+}
+
+// MARK: - Font Helper
+enum FontHelper: String {
+    case regular = "SFProText-Regular"
+    case bold = "SFProText-Bold"
 }

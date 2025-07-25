@@ -136,6 +136,7 @@ class CubeSolverViewModel: ObservableObject {
     }
 }
 
+
 extension SCNMaterial {
     static func create(with color: UIColor) -> SCNMaterial {
         let material = SCNMaterial()

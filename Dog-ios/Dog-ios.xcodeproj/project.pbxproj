@@ -30,6 +30,11 @@
 		9A77FA642CF857510054AD2F /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 9A77FA632CF857510054AD2F /* GoogleGenerativeAI */; };
 		9A77FA662CF858010054AD2F /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FA652CF858010054AD2F /* APIKey.swift */; };
 		9A77FA682CF8587F0054AD2F /* AI_screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A77FA672CF8587F0054AD2F /* AI_screen.swift */; };
+		9AD10EDE2E0E88B00085AB40 /* TemperaturePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10EDD2E0E88B00085AB40 /* TemperaturePicker.swift */; };
+		9AD419742DF81C63007306DB /* weatherAppViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD419732DF81C63007306DB /* weatherAppViews.swift */; };
+		9AD419762DF81C76007306DB /* ArcHourPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD419752DF81C76007306DB /* ArcHourPickerView.swift */; };
+		9AD419782DF85576007306DB /* ArcTempPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD419772DF85576007306DB /* ArcTempPickerView.swift */; };
+		9AD814312E336F2C00FC07FC /* CircularTemperatureSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD814302E336F2C00FC07FC /* CircularTemperatureSlider.swift */; };
 		FB48F7E61B540053A036C8D7 /* Pods_Dog_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D81CD2E3AAFDD0C5754973 /* Pods_Dog_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +86,11 @@
 		9A77FA612CF8560C0054AD2F /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
 		9A77FA652CF858010054AD2F /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		9A77FA672CF8587F0054AD2F /* AI_screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AI_screen.swift; sourceTree = "<group>"; };
+		9AD10EDD2E0E88B00085AB40 /* TemperaturePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperaturePicker.swift; sourceTree = "<group>"; };
+		9AD419732DF81C63007306DB /* weatherAppViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherAppViews.swift; sourceTree = "<group>"; };
+		9AD419752DF81C76007306DB /* ArcHourPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcHourPickerView.swift; sourceTree = "<group>"; };
+		9AD419772DF85576007306DB /* ArcTempPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcTempPickerView.swift; sourceTree = "<group>"; };
+		9AD814302E336F2C00FC07FC /* CircularTemperatureSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTemperatureSlider.swift; sourceTree = "<group>"; };
 		C1F6A697102E84DC3DFD4A84 /* Pods_Dog_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dog_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50356DBAC1A7EBBD3A208CB /* Pods-Dog-ios-Dog-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dog-ios-Dog-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-Dog-ios-Dog-iosUITests/Pods-Dog-ios-Dog-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +163,7 @@
 		047714AA2CEA802F000C914B /* screenViews */ = {
 			isa = PBXGroup;
 			children = (
+				9AD419702DF81B90007306DB /* New Group */,
 				9A7009882CE727D200A70763 /* MainView.swift */,
 				9A2C39162CE4809D001622F2 /* SplashScreen.swift */,
 				9A2C39412CE48A65001622F2 /* PremiumScreen.swift */,
@@ -252,6 +263,18 @@
 				9A5FC64E2D5C920B00F36987 /* CubeSolverViewModel.swift */,
 			);
 			path = "cubeView ";
+			sourceTree = "<group>";
+		};
+		9AD419702DF81B90007306DB /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				9AD814302E336F2C00FC07FC /* CircularTemperatureSlider.swift */,
+				9AD10EDD2E0E88B00085AB40 /* TemperaturePicker.swift */,
+				9AD419772DF85576007306DB /* ArcTempPickerView.swift */,
+				9AD419752DF81C76007306DB /* ArcHourPickerView.swift */,
+				9AD419732DF81C63007306DB /* weatherAppViews.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		FB2162CECF7C18F9625A0548 /* Frameworks */ = {
@@ -510,9 +533,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A5FC64F2D5C920B00F36987 /* CubeSolverViewModel.swift in Sources */,
+				9AD419782DF85576007306DB /* ArcTempPickerView.swift in Sources */,
 				0415CED12CEBC29700D248FE /* TranslateScreen.swift in Sources */,
 				9A7009872CE721CE00A70763 /* MyNavigationHandler.swift in Sources */,
+				9AD814312E336F2C00FC07FC /* CircularTemperatureSlider.swift in Sources */,
 				04C55FF52CE9E95C008D24E2 /* SideMenuView.swift in Sources */,
+				9AD419742DF81C63007306DB /* weatherAppViews.swift in Sources */,
 				9A7009892CE727D200A70763 /* MainView.swift in Sources */,
 				047714A62CEA7E32000C914B /* HomeViewModel.swift in Sources */,
 				9A7009852CE71C2400A70763 /* HomeScreen.swift in Sources */,
@@ -523,6 +549,8 @@
 				9A2C39152CE4809D001622F2 /* Dog_iosApp.swift in Sources */,
 				9A5FC6512D5C922400F36987 /* CubeSolverView.swift in Sources */,
 				9A77FA682CF8587F0054AD2F /* AI_screen.swift in Sources */,
+				9AD10EDE2E0E88B00085AB40 /* TemperaturePicker.swift in Sources */,
+				9AD419762DF81C76007306DB /* ArcHourPickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

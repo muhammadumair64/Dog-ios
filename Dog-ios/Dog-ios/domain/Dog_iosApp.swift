@@ -11,8 +11,11 @@ import SwiftUI
 struct Dog_iosApp: App {
     var body: some Scene {
         WindowGroup {
-          // MainView().preferredColorScheme(.light)
-            CubeSolverView().preferredColorScheme(.light) 
+            // MainView().preferredColorScheme(.light)
+            //  CubeSolverView().preferredColorScheme(.light)
+            weatherAppViews().preferredColorScheme(.light)
+           // AIScreen().preferredColorScheme(.light)
+            
         }
     }
 

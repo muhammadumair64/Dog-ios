@@ -35,14 +35,28 @@ struct CircularTemperatureSeekBar: View {
                     .frame(width: size - ringWidth, height: size - ringWidth)
 
                 // Tick labels
+                // Tick labels and dashes
                 ForEach([16.0, 20.0, 24.0, 28.0, 32.0], id: \.self) { tick in
                     let tickAngle = angleForTemp(tick)
-                    let pos = pointOnCircle(angle: tickAngle, radius: arcRadius - 20, center: radius)
+                    
+                    // Draw dashed line tick
+                    let inner = pointOnCircle(angle: tickAngle, radius: arcRadius - 8, center: radius)
+                    let outer = pointOnCircle(angle: tickAngle, radius: arcRadius + 8, center: radius)
+                    Path { path in
+                        path.move(to: inner)
+                        path.addLine(to: outer)
+                    }
+                    .stroke(style: StrokeStyle(lineWidth: 1, dash: [2, 3]))
+                    .foregroundColor(.white)
+
+                    // Draw label slightly further out
+                    let labelPos = pointOnCircle(angle: tickAngle, radius: arcRadius + 24, center: radius)
                     Text("\(Int(tick))°C")
                         .font(Font.custom(FontHelper.regular.rawValue, size: 12))
                         .foregroundColor(.white.opacity(0.8))
-                        .position(pos)
+                        .position(labelPos)
                 }
+
 
                 // Thumb aligned with arc
                 let thumbPos = pointOnCircle(angle: angle, radius: arcRadius, center: radius)

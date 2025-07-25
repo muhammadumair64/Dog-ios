@@ -19,8 +19,10 @@ struct weatherAppViews: View {
                 .padding()
             
             
-            CircularTemperatureSeekBar()
-             
+          CircularTemperatureSeekBar()
+//            ArcTimerView()
+//                      .padding()
+//                      .background(Color.black.edgesIgnoringSafeArea(.all))
             
         
 //            VStack {

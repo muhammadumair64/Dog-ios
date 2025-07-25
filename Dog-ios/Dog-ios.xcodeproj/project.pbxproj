@@ -13,6 +13,7 @@
 		04C55FF52CE9E95C008D24E2 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C55FF42CE9E95C008D24E2 /* SideMenuView.swift */; };
 		61630845A3186534CD90DD43 /* Pods_Dog_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F6A697102E84DC3DFD4A84 /* Pods_Dog_iosTests.framework */; };
 		93E02580EDF37E110D3238FA /* Pods_Dog_ios_Dog_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A340F4B399FE595E8249BA /* Pods_Dog_ios_Dog_iosUITests.framework */; };
+		9A0A08C42E339B5700424601 /* ArcSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A08C32E339B5700424601 /* ArcSliderView.swift */; };
 		9A2C39152CE4809D001622F2 /* Dog_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C39142CE4809D001622F2 /* Dog_iosApp.swift */; };
 		9A2C39172CE4809D001622F2 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C39162CE4809D001622F2 /* SplashScreen.swift */; };
 		9A2C39192CE4809F001622F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A2C39182CE4809F001622F2 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		652F00E7A76416A655F2F6A1 /* Pods-Dog-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dog-iosTests.release.xcconfig"; path = "Target Support Files/Pods-Dog-iosTests/Pods-Dog-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		67D81CD2E3AAFDD0C5754973 /* Pods_Dog_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dog_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		886A81A49A058B76E304E3C9 /* Pods-Dog-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dog-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-Dog-iosTests/Pods-Dog-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A0A08C32E339B5700424601 /* ArcSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcSliderView.swift; sourceTree = "<group>"; };
 		9A2C39112CE4809D001622F2 /* Dog-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2C39142CE4809D001622F2 /* Dog_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog_iosApp.swift; sourceTree = "<group>"; };
 		9A2C39162CE4809D001622F2 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 		9AD419702DF81B90007306DB /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				9A0A08C32E339B5700424601 /* ArcSliderView.swift */,
 				9AD814302E336F2C00FC07FC /* CircularTemperatureSlider.swift */,
 				9AD10EDD2E0E88B00085AB40 /* TemperaturePicker.swift */,
 				9AD419772DF85576007306DB /* ArcTempPickerView.swift */,
@@ -538,6 +541,7 @@
 				9A7009872CE721CE00A70763 /* MyNavigationHandler.swift in Sources */,
 				9AD814312E336F2C00FC07FC /* CircularTemperatureSlider.swift in Sources */,
 				04C55FF52CE9E95C008D24E2 /* SideMenuView.swift in Sources */,
+				9A0A08C42E339B5700424601 /* ArcSliderView.swift in Sources */,
 				9AD419742DF81C63007306DB /* weatherAppViews.swift in Sources */,
 				9A7009892CE727D200A70763 /* MainView.swift in Sources */,
 				047714A62CEA7E32000C914B /* HomeViewModel.swift in Sources */,
